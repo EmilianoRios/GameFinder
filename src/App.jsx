@@ -1,11 +1,18 @@
-import NavBar from './components/navbar/navbar';
-import FreeGames from './components/navbar/freeGames';
+import { NavBar } from './components/navbar/navbar';
+import { FreeGames } from './components/freeGames';
+
+// ---- CHAKRAUI ----
+
+import { Container } from '@chakra-ui/react';
 
 export function App() {
   return(
     <>
-    <NavBar/>
-    <FreeGames/>
+    <Container maxW="container.xl">
+      <NavBar/>
+      <FreeGames/>
+    </Container>
     </>
+
   );
 }
