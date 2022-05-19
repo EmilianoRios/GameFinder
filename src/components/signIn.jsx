@@ -8,21 +8,22 @@ import {
   Container,
   Alert,
   AlertIcon,
-  Text,
   Center,
+  Text,
 } from "@chakra-ui/react";
 // ---- HOOK ----
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
 
-export function SignUp() {
+export function SignIn() {
   const [user, setUser] = useState({
-    emailSignUp: "",
-    passwordSignUp: "",
+    emailSignIn: "",
+    passwordSignIn: "",
   });
 
-  const { signUp } = useAuth();
+  const { signIn } = useAuth();
+
   const navigate = useNavigate();
   const [error, setError] = useState();
 
@@ -34,7 +35,7 @@ export function SignUp() {
     e.preventDefault();
     setError("");
     try {
-      await signUp(user.emailSignUp, user.passwordSignUp);
+      await signIn(user.emailSignIn, user.passwordSignIn);
       navigate("/");
     } catch (error) {
       setError(error.message);
@@ -44,10 +45,10 @@ export function SignUp() {
   return (
     <Container maxW="container.sm" p="5" rounded="md" borderWidth="1px">
       <Center>
-        <Text fontSize="xl">Sign Up</Text>
+        <Text fontSize="xl">Log In</Text>
       </Center>
       {error && (
-        <Alert status="error">
+        <Alert status="error" p="2">
           <AlertIcon />
           {error}
         </Alert>
@@ -56,20 +57,20 @@ export function SignUp() {
         <FormControl>
           <FormLabel htmlFor="email">Email address</FormLabel>
           <Input
-            id="email"
+            id="emailSignIn"
             type="email"
-            name="emailSignUp"
+            name="emailSignIn"
             onChange={handleChange}
           />
           <FormLabel htmlFor="email">Password</FormLabel>
           <Input
-            id="emailSignUp"
+            id="passwordSignIn"
             type="password"
-            name="passwordSignUp"
+            name="passwordSignIn"
             onChange={handleChange}
           />
           <Button mt={4} colorScheme="blue" type="submit">
-            Register
+            Log In
           </Button>
         </FormControl>
       </form>

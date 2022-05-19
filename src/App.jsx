@@ -2,6 +2,7 @@
 import { NavBar } from "./components/navbar/navbar";
 import { FreeGames } from "./components/freeGames";
 import { SignUp } from "./components/signUp";
+import { SignIn } from "./components/signIn";
 
 // ---- CONTEXT ----
 import { AuthProvider } from "./context/authContext";
@@ -16,11 +17,14 @@ export function App() {
   return (
     <>
       <Container maxW="container.xl">
-        <NavBar />
         <AuthProvider>
+          <>
+            <NavBar />
+          </>
           <Routes>
             <Route path="/" element={<FreeGames />} />
             <Route path="/signUp" element={<SignUp />} />
+            <Route path="/signIn" element={<SignIn />} />
           </Routes>
         </AuthProvider>
       </Container>
