@@ -13,6 +13,5 @@ export function App() {
       <FreeGames/>
     </Container>
     </>
-
   );
 }
