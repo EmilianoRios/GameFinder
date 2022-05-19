@@ -6,8 +6,6 @@ import {
   Heading,
   ButtonGroup,
   Spacer,
-  Container,
-  Switch,
   Center,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
@@ -43,7 +41,7 @@ export const NavBar = () => {
           {!user ? (
             <>
               <Link to={"/signIn"}>
-                <Button colorScheme="blue">Log In</Button>
+                <Button colorScheme="gray">Log In</Button>
               </Link>
               <Link to={"/signUp"}>
                 <Button colorScheme="blue">Sign Up</Button>

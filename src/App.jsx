@@ -3,6 +3,7 @@ import { NavBar } from "./components/navbar/navbar";
 import { FreeGames } from "./components/freeGames";
 import { SignUp } from "./components/signUp";
 import { SignIn } from "./components/signIn";
+import { Game } from "./components/game";
 
 // ---- CONTEXT ----
 import { AuthProvider } from "./context/authContext";
@@ -25,6 +26,7 @@ export function App() {
             <Route path="/" element={<FreeGames />} />
             <Route path="/signUp" element={<SignUp />} />
             <Route path="/signIn" element={<SignIn />} />
+            <Route path="/game/:gameId" element={<Game />} />
           </Routes>
         </AuthProvider>
       </Container>

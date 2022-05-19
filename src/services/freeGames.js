@@ -14,7 +14,7 @@ export async function getAllFreeGames() {
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error(error);
+        console.log(error);
     }
 }
 
@@ -24,6 +24,6 @@ export async function getFreeGameById(gameId) {
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error(error);
+        console.log(error);
     }
 }
