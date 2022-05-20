@@ -20,7 +20,7 @@ export async function getAllFreeGames() {
 
 export async function getFreeGameById(gameId) {
     try {
-        const response = await fetch(`${API_URL}/game?id=${gameId}`);
+        const response = await fetch(`${API_URL}/game?id=${gameId}`, options);
         const data = await response.json();
         return data;
     } catch (error) {

@@ -69,7 +69,11 @@ export function SignIn() {
             name="passwordSignIn"
             onChange={handleChange}
           />
-          <Button mt={4} colorScheme="blue" type="submit">
+          <Button
+            mt={4}
+            colorScheme="blue"
+            type="submit"
+          >
             Log In
           </Button>
         </FormControl>

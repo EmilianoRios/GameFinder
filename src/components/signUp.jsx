@@ -68,7 +68,11 @@ export function SignUp() {
             name="passwordSignUp"
             onChange={handleChange}
           />
-          <Button mt={4} colorScheme="blue" type="submit">
+          <Button
+            mt={4}
+            colorScheme="blue"
+            type="submit"
+          >
             Register
           </Button>
         </FormControl>
