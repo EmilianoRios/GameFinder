@@ -31,9 +31,9 @@ export function Game() {
       {game ? (
         <Flex
           direction={{
-            base: "row",
+            base: "column",
             sm: "column",
-            md: "column",
+            md: "row",
             lg: "row",
             xl: "row",
           }}
